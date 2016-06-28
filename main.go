@@ -244,7 +244,7 @@ func main() {
 		{
 			Name:      "set",
 			Usage:     "set an entry",
-			ArgsUsage: "myhost.com 192.168.16.1 \"my label\"",
+			ArgsUsage: "192.168.16.1 myhost.com \"my label\"",
 			Action: func(c *cli.Context) error {
 				if len(c.Args()) < 2 || len(c.Args()) > 3 {
 					fmt.Println("Incorrect number of arguments. \"set\" only expects a hostname followed by a network address with an optional label as the third argument.")
@@ -252,8 +252,8 @@ func main() {
 				}
 				newEntryList := getHostEntries(c.GlobalString("file"))
 				newEntry := Entry{
-					hostname:       strings.TrimSpace(c.Args()[0]),
-					networkAddress: strings.TrimSpace(c.Args()[1]),
+					networkAddress: strings.TrimSpace(c.Args()[0]),
+					hostname:       strings.TrimSpace(c.Args()[1]),
 				}
 				if len(c.Args()) == 3 {
 					newEntry.label = strings.TrimSpace(c.Args()[2])
