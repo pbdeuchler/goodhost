@@ -106,6 +106,7 @@ func (list *EntryList) Write(path string) {
 			restoreHostsWithDefault(path)
 		} else {
 			fmt.Println("Your hosts file is corrupted. Please restore it manually.")
+			os.Exit(1)
 		}
 	}
 }
