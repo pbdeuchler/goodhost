@@ -1,3 +1,5 @@
+##### Well, upon revisiting this project I now realize how dramatically over engineered it is, so i'm deprecating this but leaving it up for the lolz. Use something like: [https://gist.github.com/mikeflynn/4278796](https://gist.github.com/mikeflynn/4278796)
+
 # goodhost
 
 > hosts, for good
